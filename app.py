@@ -14,7 +14,6 @@ from bs4 import BeautifulSoup as bs
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support.select import Select
 import re
-
 from selenium.webdriver.support import expected_conditions as EC
 import os
 from datetime import date
@@ -135,6 +134,6 @@ def announcements():
       list1.append(cleaned_text)
     return jsonify(list1), 200
 
-# if __name__ == '__main__':
-#     app.run()
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=10000)
     

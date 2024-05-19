@@ -31,7 +31,7 @@ CORS(app)
 @app.route('/',methods=['GET'])
 @cross_origin()
 def announcements():
-    DRIVER_PATH = r"chromedriver.exe"
+    # DRIVER_PATH = r"chromedriver.exe"
     # service = ChromeService(executable_path=ChromeDriverManager().install())
     # driver = webdriver.Chrome(service=service)
     service= ChromeService(executable_path=binary_path)

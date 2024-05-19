@@ -34,7 +34,7 @@ def announcements():
     DRIVER_PATH = r"chromedriver.exe"
     # service = ChromeService(executable_path=ChromeDriverManager().install())
     # driver = webdriver.Chrome(service=service)
-    service= webdriver.ChromeService(executable_path=binary_path)
+    service= ChromeService(executable_path=binary_path)
     driver = webdriver.Chrome(service=service)
     vars={}
     driver.get("https://ums.lpu.in/lpuums/LoginNew.aspx")

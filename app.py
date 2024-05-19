@@ -135,6 +135,6 @@ def announcements():
       list1.append(cleaned_text)
     return jsonify(list1), 200
 
-if __name__ == '__main__':
-    app.run()
+# if __name__ == '__main__':
+#     app.run()
     

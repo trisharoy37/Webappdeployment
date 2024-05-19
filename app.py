@@ -18,6 +18,9 @@ from selenium.webdriver.support import expected_conditions as EC
 import os
 from datetime import date
 from chromedriver_py import binary_path # this will get you the path variable
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
 
 # svc = webdriver.ChromeService(executable_path=binary_path)
 # driver = webdriver.Chrome(service=svc)
@@ -29,8 +32,10 @@ CORS(app)
 @cross_origin()
 def announcements():
     DRIVER_PATH = r"chromedriver.exe"
-    service= webdriver.ChromeService(executable_path=binary_path)
+    service = ChromeService(executable_path=ChromeDriverManager().install())
     driver = webdriver.Chrome(service=service)
+    # service= webdriver.ChromeService(executable_path=binary_path)
+    # driver = webdriver.Chrome(service=service)
     vars={}
     driver.get("https://ums.lpu.in/lpuums/LoginNew.aspx")
     driver.set_window_size(768, 864)
